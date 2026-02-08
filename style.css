@@ -51,44 +51,30 @@ a {
 }
 .flying-bonus {
   position: fixed;
-  bottom: -40px;
-  font-size: 18px;
+  bottom: 0;
+  font-size: 16px;
   color: #facc15;
-  animation: floatUp 3s linear forwards;
+  animation: flyUp 2s linear forwards;
   pointer-events: none;
-  z-index: 1;
 }
 
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+@keyframes flyUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-150px); opacity: 0; }
+}
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 50px;
   }
-  100% {
-    transform: translateY(-200px) scale(0.5);
-    opacity: 0;
+
+  .card {
+    width: 90%;
   }
 }
-.actions {
-  margin: 30px 0;
-}
-
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #22d3ee, #38bdf8);
-  color: #020617;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 0 20px rgba(34,211,238,.5);
-  transition: transform .3s, box-shadow .3s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(34,211,238,.8);
-}
-
 
